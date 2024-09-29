@@ -1,8 +1,9 @@
 html , body {
 
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     perspective: 800px;
+
 }
 
 * {
@@ -10,7 +11,7 @@ html , body {
     padding: 0;
     box-sizing: border-box ;
     color: white;
-    ;
+    
 }
 
 
@@ -72,7 +73,7 @@ background-color: rgba(0, 0 , 0, 0.37);
 }
 
 h1 {
-    font-size: 135px;
+    font-size: 10vw;
     font-weight: 900;
     text-transform: uppercase;
     position: relative;
@@ -96,9 +97,9 @@ h1 {
 
 .page1 p {
 
-    font-size:  18px;
+    font-size:  2vw;
     font-weight: 400;
-    width: 40%;
+    width: 40vw;
     margin-top: 10px;
     margin-bottom: 20px;
   
@@ -168,7 +169,7 @@ h1 {
     display: inline-block;
     transition: all linear 0.4s;
     color: transparent;
-    font-size: 140px;
+    font-size: 10vw;
     font-weight: 900;
     font-family: gilroy;
     -webkit-text-stroke: 2px #95c11E;
@@ -180,7 +181,10 @@ h1 {
 #aboutus {
 
     display: flex;
-    height: 40vh;
+    height: 80vh;
+    
+    text-align: center;
+
     
     justify-content: space-around;
     padding: 0 50px;
@@ -191,27 +195,34 @@ h1 {
 
 #aboutus img {
 
-    height: 200px;
-    width: 200px;
+    height: 30vh;
+    width: 30vw;
     border-radius: 23px;
     object-fit: cover;
 }
 
 #aboutus-in{
-    width: 50%;
+    display: flex;
+
+    flex-direction: column;  
+     width: 40%;
     text-align: center;
+    justify-content:center
 }
 
 
 #aboutus-in h3 {
-    font-size: 54px;
+    font-size: 5vw;
     font-weight: 800;
     margin-bottom: 23px;
 }
 
 #aboutus-in p {
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 2vw;
+    line-height: 24px;
+    
+    
+
 }
 
 
@@ -309,8 +320,8 @@ z-index: 10;
 
 
 #greendiv h4 {
-    width: 45%;
-    font-size: 23px;
+    width: 30vw;
+    font-size: 2vw;
     line-height: 50px;
     text-align: center;
     text-transform: uppercase;
@@ -339,7 +350,7 @@ width: 13%;
 
 
 #page3 p {
-    font-size: 23px;
+    font-size: 2vw;
     text-align: center;
     font-weight: 800;
     width: 55%;
@@ -349,7 +360,7 @@ width: 13%;
 
 #page3 img {
     position: absolute;
-    height: 60px;
+    height: 5vw;
 }
 
 
@@ -364,6 +375,9 @@ width: 13%;
     bottom: 26%;
     right : 15%;
 }
+
+
+
 
 
 #page4 {
@@ -430,7 +444,7 @@ width: 13%;
 #page4 h1 {
     position: absolute;
     top: -2%;
-    font-size: 90px;
+    font-size: 5vw;
     font-weight: 900;
     color: black;
    -webkit-text-stroke: 2px white; 
@@ -493,4 +507,153 @@ width: 13%;
   font-weight: 600;
   line-height: 20px;
   margin-bottom: 8px;
+}
+
+@media (max-width : 679px) {
+
+    #aboutus {
+        flex-direction: column;
+    }
+
+    #aboutus img {
+        width: 100%;
+    }
+
+    #aboutus-in{
+        width: 100%;
+        text-align:center;
+    }
+
+
+    #cards-container {
+        flex-direction: column;
+        height: 100%;
+
+    }
+    
+
+    #cards-container .cards {
+        
+        position: relative;
+        top: 50px;
+        width: 100%;
+    
+        
+    }
+
+
+    #greendiv {
+        display: none;
+    }
+
+
+    #page4 {
+        flex-direction: column;
+        height: 100%;
+        padding-bottom: 20vw;
+    }
+
+
+
+    #page4 h1 {
+        position: relative;
+    }
+
+    #page4 .elem {
+        height: 100%;
+        width: 100%;
+        
+    }
+
+    #footer {
+        flex-direction:column ;
+        
+        height: 100%;
+        width: 100%;
+    }
+
+
+    #footer > #f1 #f2#f3 #f4 {
+        font-size: 100vw;
+    }
+
+
+    #footer img {
+        width: 60%;
+
+    }
+
+
+    #f2 h3 {
+
+        
+        font-size: 3.5vw;
+        position: relative;
+        right: 100px;
+        bottom: 23px;
+    }
+
+
+    #f3 h3 {
+        font-size: 3.5vw;
+        position: relative;
+        right: 125px;
+        bottom: 23px;
+    }
+
+    
+    #f4 h4 {
+        font-size: 3.5vw;
+        position: relative;
+        right: 100px;
+        bottom: 23px;
+    }
+
+
+
+    #page3 p {
+        font-size: 3.5vw;
+    }
+
+
+
+    
+
+
+    
+
+
+    #nav h4 {
+
+
+
+
+        display: none;
+
+    
+        
+        
+
+
+    }
+
+
+   
+
+
+}
+
+
+.buttons {
+    display: none
+    
+}
+
+
+#btn {
+    padding: 10px 40px;
+background-color: #000;
+border-radius: 50px;
+border: 2px solid green;
+    
 }
